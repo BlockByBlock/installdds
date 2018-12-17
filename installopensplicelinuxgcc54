@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -o verbose
-set -e
+set -o errexit
 
 SCRIPTS_DIR=$(readlink -f "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )")
 echo "scripts path: $SCRIPTS_DIR"
