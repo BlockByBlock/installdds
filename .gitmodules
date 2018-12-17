@@ -1,0 +1,3 @@
+[submodule "dds-tutorial-cpp-ex"]
+	path = dds-tutorial-cpp-ex
+	url = https://github.com/ADLINK-IST/dds-tutorial-cpp-ex
