@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+set -o verbose
+set -e
+
+SCRIPTS_DIR=$(readlink -f "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )")
+echo "scripts path: $SCRIPTS_DIR"
+
+sudo apt-get update
+sudo apt-get install -y gawk bison flex perl libssl-dev
+
+echo "This version is meant for linux with gcc5.4"
+echo "For other version, please refer to binary releases on ADLINK github"
+
+cd $SCRIPTS_DIR
+
+wget https://github.com/ADLINK-IST/opensplice/releases/download/OSPL_V6_9_181018OSS_RELEASE/PXXX-VortexOpenSplice-6.9.181018OSS-HDE-x86_64.linux-gcc5.4.0-glibc2.23-installer.tar.gz
+
+tar -xzf PXXX-VortexOpenSplice-6.9.181018OSS-HDE-x86_64.linux-gcc5.4.0-glibc2.23-installer.tar.gz 
+
+echo "Installation completed"
+
+echo "IMPORTANT: SOURCE ENVIRONMENT VARIABLE!!!"
+echo "source SCRIPTS_DIR/HDE/x86_64.linux/release.com"
+
